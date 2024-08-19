@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alves & Carvalho Intermediações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .bio, .portfolio, .services, .contact {
+            margin-bottom: 40px;
+        }
+        .bio p, .services p {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        .portfolio img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact form input[type="submit"]:hover {
+            background-color: #575757;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="data:image/png;base64,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" alt="Logotipo">
+</header>
+
+<nav>
+    <a href="#bio">Quem Somos</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#services">Serviços</a>
+    <a href="#contact">Contato</a>
+</nav>
+
+<div class="container">
+    <section class="bio" id="bio">
+        <h2>Quem Somos</h2>
+        <p>A Alves & Carvalho Intermediações é uma empresa dedicada a prestar serviços de consultoria e intermediação em diversas áreas. Nossa missão é conectar pessoas e negócios, oferecendo soluções personalizadas que atendam às necessidades de nossos clientes com excelência e profissionalismo.</p>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio-grid">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+            <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Serviços</h2>
+        <p>Oferecemos uma gama de serviços que incluem consultoria empresarial, intermediação de negócios, gestão de projetos, entre outros. Nossos profissionais são altamente qualificados e comprometidos em entregar resultados que superem as expectativas.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contato</h2>
+        <form action="mailto:contato@alvescarvalho.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2023 Alves & Carvalho Intermediações. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
